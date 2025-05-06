@@ -14,6 +14,7 @@ We will show the website updating live on a browser from our laptop after pushin
     • Server Operating System (OS): We will choose between Debian and Ubuntu Server based on which is easier to use and has good online help.
     • Web Server Software: We will look at Nginx and Apache to see which is simpler to set up for our website.
     • VPS provider: AWS, Gratis VPS, Digital Ocean
+    • Domain providers: Route 53 (AWS), Ionos
 ## Timeline:
 ### Week 1: 
     • Setting up the GitHub repository.
@@ -22,8 +23,11 @@ We will show the website updating live on a browser from our laptop after pushin
     • Choosing the right VPS provider.
     • Figuring what choices to make
 ### Week 2: 
-    • Get the website running on the VPS Provider with the SSH login requirement.
+    • Select the where to buy the domain for the website and select the name for your site.
+    • Get a static IP on the Lightsail instance and connect that static IP to the domain you purchased.
 ### Week 3: 
+    • Set up Nginx so we can put our website in the file that runs the site.
+    • Get the website running on the VPS Provider with the SSH login requirement
     • Make the website update automatically from GitHub and prepare to show it.
     • Prepare our presentation
 ## Team composition: Luis Angelo Primero, Sean Lussier, Abdulmajeed Kakar
