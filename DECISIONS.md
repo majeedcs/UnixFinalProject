@@ -120,3 +120,5 @@ For our project, we considered two main web server options: **Nginx** and **Apac
 ### Conclusion
 
 Since we’re deploying a static website and want something fast, simple, and familiar, **Nginx is the better fit** for our project.
+
+•	TODO: Firewall for security, update and upgrade, and add a user for testing get nginx running with the basic index.html file, look into how to get our own website on it maybe we clone the github repository on to the place where the basic index.html file is(not sure).
