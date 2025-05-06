@@ -62,11 +62,28 @@ Lastly we can say that from how it looks now considering the simple needs of our
 
 ---
 
-## Choice 2: Picking a Domain
+## Choice 2: Picking a Domain Name - Ionos vs Aws Route 53
 
-Using Lightsail, not sure about EC2 yet.
 
----
+### Ionos
+**Pros:**
+- They had a deal where I can get my 1st year with the domain name for 1$, which is more then enough time for us.
+- User Friendly interface
+- Easy to use
+
+**Cons:**
+- What we purchased definetly has less features then what Amazon Lightsail can do.
+
+### Route 53
+**Pros:**
+- It has a lot of features on it, you will have more options
+- Easy to use with Aws since everything is on the same site.
+
+**Cons:**
+- Less user friendly
+- It cost more for the first year.
+
+The decision we came to here was Ionos, mainly was for the price however it seems to be more beginner friendly then Route 53 that we had seen a video about.
 
 ## Choice 3: Web Server – Nginx vs. Apache
 
