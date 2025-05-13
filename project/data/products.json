@@ -1,0 +1,252 @@
+{
+    "categories":[
+        {
+            "category_id": 1,
+            "category_name": "Recommended",
+            "description": "Category containing all of the recommended products."
+        },
+        {
+            "category_id": 2,
+            "category_name": "Computer Parts",
+            "description": "Category containing all of the computer parts."
+        },
+        {
+            "category_id": 3,
+            "category_name": "Deals",
+            "description": "Category containing only the products with special deals."
+        },
+        {
+            "category_id": 4,
+            "category_name": "Laptops",
+            "description": "Category containing all of the laptops."
+        },
+        {
+            "category_id": 5,
+            "category_name": "Desktops",
+            "description": "Category containing all of the desktops."
+        }
+    ],
+    
+    "products":[
+        {
+            "item_id": 1,
+            "category_id": 1,
+            "item_title": "item",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://resource.logitech.com/content/dam/gaming/en/products/pro-x60-wireless-keyboard/gallery/pro-x-60-keyboard-black-gallery-1-us.png"
+        },
+        {
+            "item_id": 2,
+            "category_id": 1,
+            "item_title": "item",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"data:image/jpeg;base64,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"
+        },
+        {
+            "item_id": 3,
+            "category_id": 1,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://static.gigabyte.com/StaticFile/Image/Global/51e331ebe21429c73af92ee48202fe98/Product/28278/Png"
+        },
+        {
+            "item_id": 4,
+            "category_id": 1,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Headsets/CA-9011186-NA/Gallery/VIRTUOSO_WHITE_01.webp"
+        },
+        {
+            "item_id": 5,
+            "category_id": 2,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://www.hellotech.com/blog/wp-content/uploads/2020/02/what-is-a-gpu.jpg"
+        },
+        {
+            "item_id": 6,
+            "category_id": 2,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://www.hellotech.com/blog/wp-content/uploads/2020/02/what-is-a-gpu.jpg"
+        },
+        {
+            "item_id": 7,
+            "category_id": 2,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://www.hellotech.com/blog/wp-content/uploads/2020/02/what-is-a-gpu.jpg"
+        },
+        {
+            "item_id": 8,
+            "category_id": 2,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://www.hellotech.com/blog/wp-content/uploads/2020/02/what-is-a-gpu.jpg"
+        },
+        {
+            "item_id": 9,
+            "category_id": 3,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
+        },
+        {
+            "item_id": 10,
+            "category_id": 3,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
+        },
+        {
+            "item_id": 11,
+            "category_id": 3,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
+        },
+        {
+            "item_id": 12,
+            "category_id": 3,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
+        },
+        {
+            "item_id": 13,
+            "category_id": 4,
+            "item_title": "laptop 1",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
+        },
+        {
+            "item_id": 14,
+            "category_id": 4,
+            "item_title": "laptop 2",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
+        },
+        {
+            "item_id": 15,
+            "category_id": 4,
+            "item_title": "laptop 3",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
+        },
+        {
+            "item_id": 16,
+            "category_id": 4,
+            "item_title": "laptop 4",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
+        },
+        {
+            "item_id": 17,
+            "category_id": 5,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
+        },
+        {
+            "item_id": 18,
+            "category_id": 5,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
+        },
+        {
+            "item_id": 19,
+            "category_id": 5,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
+        },
+        {
+            "item_id": 20,
+            "category_id": 5,
+            "item_title": "idk",
+            "description":"jimmy",
+            "brand":"intel",
+            "unit_price": 19.99,
+            "quantity_in_stock": 25,
+            "make":"intel",
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
+        }
+    ]
+}

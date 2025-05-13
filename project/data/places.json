@@ -1,0 +1,86 @@
+{
+    "categories": [
+    {
+        "id": 1,
+        "name": "Gyms",
+        "description": "Places to get fit",
+        "markerIcon": "./assets/markers/mapiconscollection-relaxing-sports-ff8a22-default/weights.png"
+    },
+    {
+        "id": 2,
+        "name": "Coffee Shops",
+        "description": "Why buy less than expensive coffee?",
+        "markerIcon": "./assets/markers/mapiconscollection-bars-8c4eb8-default/coffee.png"
+    },
+    {
+        "id": 3,
+        "name": "Computer Stores",
+        "description": "Go shop for electronics!",
+        "markerIcon": "./assets/markers/mapiconscollection-computers-electronics-5ec8bd-default/computers.png"
+    },
+    {
+        "id": 4,
+        "name": "Grocery Stores",
+        "description": "Buy some food.",
+        "markerIcon": "./assets/markers/mapiconscollection-general-merchandise-5ec8bd-default/supermarket.png"
+    },
+    {
+        "id": 5,
+        "name": "Restaurants",
+        "description": "Places to go eat food",
+        "markerIcon": "./assets/markers/mapiconscollection-restaurants-8c4eb8-default/restaurant.png"
+    }
+    ],
+    "places": [
+    {
+        "name": "Econofitness St. Michel",
+        "address":"8255 Bd Saint-Michel, Montréal, QC H1Z 2B2",
+        "description": "Get fit.",
+        "point": {
+        "lat": "45.56504780817925",
+        "long": "-73.61135873745164"
+        },
+        "categoryId": 1
+    },
+    {
+        "name": "Starbucks Rockland Mount Royal",
+        "address":"2305 Rockland Rd, Mount Royal, Quebec H3P 1B6",
+        "description": "Drink coffee for energy.",
+        "point": {
+        "lat": "45.52816609438094",
+        "long": "-73.64781482799562"
+        },
+        "categoryId": 2
+    },
+    {
+        "name": "Canada Computers Marcher central",
+        "address":"1001 Rue du Marché Central Local A8, Montreal, Quebec H4N 1J8",
+        "description": "Marcher Central Computers",
+        "point": {
+        "lat": "45.53550642271916", 
+        "long": " -73.65346269847909"
+        },
+        "categoryId": 3
+    },
+    {
+        "name": "Canada Computers St Catherine",
+        "address":"488 Saint-Catherine St W, Montreal, Quebec H3B 1A6",
+        "description": "St Catherine Computers",
+        "point": {
+        "lat": "45.504416891967196",
+        "long": "-73.56797842216935"
+        },
+        "categoryId": 3
+    },
+    {
+        "name": "Canada Computers Dollard-Des Ormeaux",
+        "address":"3351 Sources Blvd, Dollard-Des Ormeaux, Quebec H9B 1Y3",
+        "description": "DDO Computers",
+        "point": {
+        "lat": "45.48634652078649",
+        "long": "-73.79736545407985"
+        },
+        "categoryId": 3
+    }
+    ]
+   }
