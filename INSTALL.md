@@ -80,6 +80,134 @@ sudo systemctl reload nginx
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx
 
-Next week plan: Remove this Majeed when you finish up because there is no more next week plan
-- figure out how to make automatic backups 
-- install required packages
+## Setting Up a Cron Job for Auto Deployment
+
+### 1. Create a Bash Script to Pull Latest Changes and Restart Nginx
+1. Create the script:
+
+```bash
+sudo nano /usr/local/bin/update_website.sh
+
+#!/bin/bash
+
+# Navigate to the website directory
+cd /var/www/unix-project.com
+
+# Pull the latest changes from the Git repository
+/usr/bin/git pull origin main
+
+# Restart Nginx to serve the updated files
+/usr/sbin/service nginx restart
+```
+2. Make the script executable
+   
+```bash
+sudo chmod +x /usr/local/bin/update_website.sh
+
+```
+3. Set Up Cron Job to Run the Script Every Minute
+   
+```bash
+
+crontab -e
+#Add the following line to check the website every minute:
+
+* * * * * /usr/local/bin/update_website.sh >> /var/log/cron_job.log 2>&1
+
+```
+
+4. Set Up UFW Firewall
+Install UFW (if it's not already installed):
+
+```bash
+
+sudo apt install ufw
+```
+5. Allow necessary ports (HTTP, HTTPS, and SSH):
+
+```bash
+
+sudo ufw allow 22  # SSH
+sudo ufw allow 80  # HTTP
+sudo ufw allow 443 # HTTPS
+```
+Enable UFW firewall:
+
+```bash
+
+sudo ufw enable
+```
+6. Check the status of the firewall to confirm it's active:
+
+```bash
+sudo ufw status
+```
+
+### Setting Up SSH Access from Local Machine to VPS (Password-less Login)
+
+#### 1. Generate SSH Key Pair on Local Machine
+
+1\. On your local machine, open a terminal and generate an SSH key pair:
+
+```bash
+
+ssh-keygen
+```
+
+2\. Copy the Public Key to the VPS
+
+Copy the generated public key to your VPS using the ssh-copy-id command. Replace username with the name of the user on the VPS and your_server_ip with the IP address of your VPS:
+
+```bash
+
+ssh-copy-id username@your_server_ip
+```
+If prompted, enter the password for the username on the VPS.
+
+3\. Verify the SSH Key Authentication
+
+After copying the public key, test the SSH login by running:
+
+```bash
+
+ssh username@your_server_ip
+```
+You should now be able to log in to the VPS without being prompted for a password.
+
+4\. Disable Password Authentication on the VPS for Security
+
+SSH into your VPS:
+
+```bash
+
+ssh username@your_server_ip
+```
+Open the SSH configuration file to disable password authentication:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+Find the line that says #PasswordAuthentication yes and change it to:
+
+```bash
+
+PasswordAuthentication no
+```
+
+Restart the SSH service for the changes to take effect:
+
+```bash
+sudo systemctl restart ssh
+```
+
+5\. Test SSH Access Again (Password-less Login Only)
+
+Test the connection again from your local machine:
+
+```bash
+
+ssh username@your_server_ip
+```
+You should now be able to access the VPS using SSH without a password prompt, and password-based SSH login will be disabled for security.
+
+
