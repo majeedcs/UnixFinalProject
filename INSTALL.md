@@ -35,25 +35,34 @@
 1. Open up the terminal for the lightsail instance on aws. You can just press the connect using SSH button.
 2. Then we will be put in the terminal, the first thing we do is install nginx and type the command: (sudo apt install nginx -y)
 3. Then the next two commands we do so we can start nginx and make sure it starts on boot are:
-
+```bash
 sudo systemctl start nginx
 
 sudo systemctl enable nginx
-
+```
 4. After we do these commands, what's in parentheses is not part of the code just an explantion from us on how to use the commands properly:
+```bash
+sudo mkdir -p /var/www/yourdomain.com/html
 
-sudo mkdir -p /var/www/yourdomain.com/html (-p makes it so parent directories are created if they don't yet exist. yourdomain.com, replace this with your actual domain name)
+# (-p makes it so parent directories are created if they don't yet exist. yourdomain.com, replace this with your actual domain name)
 
-sudo cp -r /path/to/your/website/files/* /var/www/yourdomain.com/html/ (-r copies all files recusively and the ones in subfolders. 
-Then you write down the to where the files for your website are stored and copy them to the directory we just made earlier.)
+sudo cp -r /path/to/your/website/files/* /var/www/yourdomain.com/html/
 
-sudo chown -R www-data:www-data /var/www/yourdomain.com (-R recursively applies this to all the files and directories in the domain. We change the ownership to of the files to the www-data user and group. www-data is the default user nginx web server runs as. You change ownership to www-data to make sure Nginx can access and serve the files.)
+# (-r copies all files recusively and the ones in subfolders. 
+# Then you write down the path to where the files for your website are stored and copy them to the directory we just made earlier.)
 
+sudo chown -R www-data:www-data /var/www/yourdomain.com
+
+# (-R recursively applies this to all the files and directories in the domain.
+# We change the ownership to of the files to the www-data user and group.
+# www-data is the default user nginx web server runs as.
+# You change ownership to www-data to make sure Nginx can access and serve the files.)
+```
 5. Next we need to make a config file so we type in the following commands:
-
+```bash
 sudo nano /etc/nginx/sites-available/yourdomain.com
 
-(Inside the file we nano, make sure you replace the yourdomain.com with your actual domain)
+# (Inside the file we nano, make sure you replace the yourdomain.com with your actual domain)
 
 server {
     listen 80;
@@ -66,20 +75,20 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-
+```
 6. We type this command to enable the site then we reload nginx
-
+```bash
 sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
 
 sudo systemctl reload nginx
-
+```
 7. Search up the domain to see if your website works.
 
 8. Optional you can add these commands if you want to secure your site.
-
+```bash
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx
-
+```
 ## Setting Up a Cron Job for Auto Deployment
 
 ### 1. Create a Bash Script to Pull Latest Changes and Restart Nginx
