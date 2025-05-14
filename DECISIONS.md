@@ -121,4 +121,43 @@ For our project, we considered two main web server options: **Nginx** and **Apac
 
 Since we’re deploying a static website and want something fast, simple, and familiar, **Nginx is the better fit** for our project.
 
-•	TODO: Firewall for security, update and upgrade, and add a user for testing get nginx running with the basic index.html file, look into how to get our own website on it maybe we clone the github repository on to the place where the basic index.html file is(not sure).
+## Choice 4: Auto-Deployment Method – Webhooks vs. Cron Jobs
+
+As part of our deployment strategy, we needed a way to automatically update our website whenever we pushed changes to GitHub. Two main methods we considered were **GitHub Webhooks** and **Cron Jobs**.
+
+---
+
+### Webhooks
+
+**Pros:**
+- Real-time updates. Changes pushed to GitHub can instantly trigger a deployment.
+- Professional and scalable. This is how many CI/CD pipelines work.
+- Great long-term solution for larger or constantly updated projects.
+
+**Cons:**
+- More complicated to set up. Requires configuring a webhook listener or CI/CD tool like GitHub Actions, Jenkins, or a custom script running on a port.
+- Potential security concerns if the webhook is not properly secured.
+
+---
+
+### Cron Job
+
+**Pros:**
+- Simple to set up. We just need to schedule a recurring task using `crontab`.
+- Pulls the latest changes from the GitHub repo at regular intervals (e.g., every minute).
+- Works well for our use case since the site doesn’t need instant updates.
+
+**Cons:**
+- Not real-time. There’s a slight delay between making changes and seeing them live.
+- Pulling when there are no changes can create unnecessary overhead.
+
+---
+
+### Conclusion
+
+We chose **cron jobs** because of their simplicity. For a student project like ours, we didn’t need the complexity of webhooks or full CI/CD. A basic cron job that pulls the latest changes and restarts the Nginx service every minute works perfectly.
+
+Here’s our cron job:
+ ```bash
+* * * * * cd /var/www/unix-project.com && git pull origin main && sudo service nginx restart >> /var/log/cron_job.log 2>&1
+  ```
