@@ -75,7 +75,7 @@ sudo systemctl reload nginx
 
 7. Search up the domain to see if your website works.
 
-8. Optional you can add these commands if you to secure your site
+8. Optional you can add these commands if you want to secure your site.
 
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx
