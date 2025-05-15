@@ -31,6 +31,10 @@
 14. Then we click A which is for an IPv4 address (The static IP we just created).
 15. Then inside the Points to text box we write our static IP address we got from Lightsail, then we click save.
 
+## Cloning the repository for the website onto your VPS
+```bash
+git clone <url of your repository>
+```
 ## Setting up Nginx to display our website
 1. Open up the terminal for the lightsail instance on aws. You can just press the connect using SSH button.
 2. Then we will be put in the terminal, the first thing we do is install nginx and type the command: (sudo apt install nginx -y)
@@ -58,6 +62,8 @@ sudo chown -R www-data:www-data /var/www/yourdomain.com
 # www-data is the default user nginx web server runs as.
 # You change ownership to www-data to make sure Nginx can access and serve the files.)
 ```
+Make sure that the path is the one to your repository you want to autodeploy
+
 5. Next we need to make a config file so we type in the following commands:
 ```bash
 sudo nano /etc/nginx/sites-available/yourdomain.com
